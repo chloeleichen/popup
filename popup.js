@@ -1,5 +1,5 @@
 /*!
- * Popups
+ * Popups by @chloechenlei
  * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
  */
 
@@ -73,7 +73,7 @@
               dateArray.push(popupsArray[i].t);
             }
         }
-        window.setTimeout(open, 2000);
+        window.setTimeout(open, delay);
       }else{
         console.log("No Storage");
       }
@@ -82,5 +82,4 @@
     return self;
   };
   window.popup = popup;
-
 })();

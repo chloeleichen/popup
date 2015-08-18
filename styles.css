@@ -1,6 +1,7 @@
 .popup-content {
 	width: 80%;
 	max-width: 400px;
+    margin: 10vh auto;
 }
 
 /* Styles for the popup.js plugin */
@@ -35,6 +36,7 @@ body {
     -ms-animation-name: fade-in .25s ease-in;
     -o-animation-name: fade-in .25s ease-in;
     animation-name: fade-in .25s ease-in;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .popup-open #popup-cover {

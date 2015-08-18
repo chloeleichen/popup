@@ -10,20 +10,20 @@
   <link href='basscss.min.css' rel='stylesheet'>
   <link href='styles.css' rel='stylesheet'>
 </head>
-<body class="p2" id ="cats">
+<body class="p2 bg-aqua" id ="all">
   <!-- your site's markup -->
   <header class="container" >
   <div class="clearfix mb2 white bg-black">
   <div class="left">
-    <a href="#!" class="btn py2 m0">Cats</a>
+    <a href="./index.html" class="btn py2 m0">Cats</a>
     <a href="./dogs.html" class="btn button-narrow py2 m0">Dogs</a>
   </div>
   <div class="right">
-    <a href="./all.html" class="btn py2 m0">All animals</a>
+    <a href="#!" class="btn py2 m0">All animals</a>
   </div>
   <div class="clearfix sm-hide"></div>
 </div>
-<h1> Popup Demo - Page Cats</h1>
+<h1> Popup Demo - Page all animals</h1>
 </header>
   <div class="container">
     <div class="clearfix sm-col-12 ">
@@ -40,24 +40,20 @@
    </div> <!-- end of main -->
    <!-- start popup -->
    <div id="popup-cover" class="splash">
-    <div class="popup-content bg-silver p3">
+    <div class="popup-content bg-white p3">
       <!-- the popup content (form, welcome message, etc.) -->
-      <form class="p1">
-        <label>Email Address</label>
-        <input type="text" class="block col-12 mb1 field">
-        <label>Password</label>
-        <input type="password" class="block col-12 mb1 field">
-        <label>Select</label>
-        <select class="block col-12 mb1 field">
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-          <option>Option 4</option>
-          <option>Option 5</option>
-        </select>
-        <button type="submit" class="btn btn-primary popup-submit">Sign In</button>
-        <label>or<a class="popup-close"> close</a></label>
-      </form>
+      <h3>Your favorite animal</h3>
+      <form class="">
+      <label class="hide">Name</label>
+      <input type="text" class="block col-12 field rounded-top y-group-item" placeholder="name">
+      <label class="hide">Species</label>
+      <input type="password" class="block col-12 field not-rounded y-group-item" placeholder="species">
+      <div class="mt1">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-outline popup-close">Close</button>
+      </div>
+
+    </form>
     </div><!--end .splash-center -->
   </div><!--end .splash -->
   <!-- end popup -->

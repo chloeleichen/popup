@@ -1,5 +1,5 @@
 /*!
- * WWOT Popup
+ * Popups
  * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
  */
 
@@ -12,11 +12,11 @@
         idArray =[],
         dateArray =[];
     //triggers
-    var popupCpopuplose =$(".popup-close"),
+    var popupClose =$(".popup-close"),
         popupSubmit =$('.popup-submit');
 
     //options
-    var delay = delay || 1000,
+    var delay = delay || 500,
         expire = expire || 6;
 
     //private methods
@@ -24,7 +24,8 @@
       //check if nid exists
       if($.inArray(nid, idArray) === -1){
         $("body").addClass("popup-open");
-        popupCpopuplose.click(close);
+        if (popupClose){popupClose.click(close)};
+        if (popupSubmit){popupSubmit.click(close)};
       }else{
         var currentDate = new Date().getTime();
         var time = dateArray[$.inArray(nid, idArray)];
@@ -35,13 +36,16 @@
         } else{
           $("body").addClass("popup-open");
            popupsArray.splice($.inArray(nid, idArray), 1);
-           popupCpopuplose.click(close);
+           if (popupClose){popupClose.click(close)};
+           if (popupSubmit){popupSubmit.click(close)};
         }
       }
     };
 
     var close = function(e){
-      e.preventDefault();
+      if($(this).text() === popupClose.text()){
+        e.preventDefault();
+      }
       var date = new Date().getTime();
       var obj ={
         id: nid,
@@ -62,7 +66,6 @@
         //check if exists
         if(popups){
            popupsArray=JSON.parse(popups);
-           console.log(popupsArray);
            //Get ID Array
            for (var i = 0; i < popupsArray.length; i ++){
             //create two array for manipulation

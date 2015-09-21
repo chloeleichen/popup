@@ -67,11 +67,13 @@
         if(popups){
            popupsArray=JSON.parse(popups);
            //Get ID Array
-           for (var i = 0; i < popupsArray.length; i ++){
-            //create two array for manipulation
-              idArray.push(popupsArray[i].id);
-              dateArray.push(popupsArray[i].t);
-            }
+           idArray = popupsArray.map(function(element){
+              return element.id;
+           });
+
+           dateArray = popupsArray.map(function(element){
+              return element.t;
+           });
         }
         window.setTimeout(open, delay);
       }else{
